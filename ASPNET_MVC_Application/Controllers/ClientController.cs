@@ -122,7 +122,7 @@ namespace ASPNET_MVC_Application.Controllers
         public ActionResult delete(int id)
         {
             var client = Client.GetClients();
-            var deleted = false;
+            //var deleted = false;
             // adding a comment
 
             foreach(Client clients in client)
@@ -133,7 +133,7 @@ namespace ASPNET_MVC_Application.Controllers
                     client.RemoveAt(index);
 
                     System.IO.File.WriteAllText(Client.ClientFile,JsonConvert.SerializeObject(client));
-                    deleted = true;
+                    //deleted = true;
                     break;
                 }
             }
